@@ -38,6 +38,14 @@ public class CryptoService {
         return new IvParameterSpec(iv);
     }
 
+    public IvParameterSpec getIv(){
+        return this.IV;
+    }
+
+    public void setIv(IvParameterSpec Iv){
+        this.IV = Iv;
+    }
+
     public String encrypt(String input) throws NoSuchPaddingException, NoSuchAlgorithmException,
         InvalidAlgorithmParameterException, InvalidKeyException,
         BadPaddingException, IllegalBlockSizeException {
